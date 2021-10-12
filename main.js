@@ -22,33 +22,6 @@ document.querySelector("form").addEventListener("submit", (event) => {
         // check weather
         console.log(weather);
 
-        document.querySelector(
-          "#textBox"
-        ).innerHTML = `<h2>${weather.nearest_area[0].areaName[0].value}
-        </h2>
-        <p><b>Area:</b> ${weather.nearest_area[0].areaName[0].value}</p>
-        <p><strong>Region:</strong> ${weather.nearest_area[0].region[0].value}</p>
-        <p><b>Country:</b> ${weather.nearest_area[0].country[0].value}</p>
-        <p><b>Currently:</b> Feels Like ${weather.current_condition[0].FeelsLikeF}°F</p>`;
-
-        document.querySelector("#today").innerHTML = `<h3>Today
-          </h3>
-          <p><b>Average Temperature:</b> ${weather.weather[0].avgtempF}°F</p>
-          <p><strong>Max Temperature:</strong> ${weather.weather[0].maxtempF}°F</p>
-          <p><b>Min Temperature:</b> ${weather.weather[0].mintempF}°F</p>`;
-
-        document.querySelector("#tomorrow").innerHTML = `<h3>Tomorrow
-          </h3>
-          <p><b>Average Temperature:</b> ${weather.weather[1].avgtempF}°F</p>
-          <p><strong>Max Temperature:</strong> ${weather.weather[1].maxtempF}°F</p>
-          <p><b>Min Temperature:</b> ${weather.weather[1].mintempF}°F</p>`;
-
-        document.querySelector("#dayAfter").innerHTML = `<h3>Day After Tomorrow
-          </h3>
-          <p><b>Average Temperature:</b> ${weather.weather[2].avgtempF}°F</p>
-          <p><strong>Max Temperature:</strong> ${weather.weather[2].maxtempF}°F</p>
-          <p><b>Min Temperature:</b> ${weather.weather[2].mintempF}°F</p>`;
-
         // create 4 articles in the main section (main-info, today, tomorrow, day-after)
         const mainInfo = document.createElement("article");
         mainInfo.id = "main-info";

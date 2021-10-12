@@ -64,53 +64,49 @@ document.querySelector("form").addEventListener("submit", (event) => {
           .querySelector(".display")
           .append(mainInfo, today, tomorrow, dayAfter);
 
-        // main info
-        const mainHeading = document.createElement("h2");
-        mainHeading.textContent = location;
-        const area = document.createElement("p");
-        area.textContent = `Area: ${weather.nearest_area[0].areaName[0].value}`;
-        const region = document.createElement("p");
-        region.textContent = `Region: ${weather.nearest_area[0].region[0].value}`;
-        const country = document.createElement("p");
-        country.textContent = `Country: ${weather.nearest_area[0].country[0].value}`;
-        const currently = document.createElement("p");
-        currently.textContent = `Currently: Feels like ${weather.current_condition[0].FeelsLikeF}°F`;
-        // append to main
-        // mainInfo.append(mainHeading, area, region, country, currently);
+        // previous work
 
-        // add to today
-        const todayHeading = document.createElement("h3");
-        todayHeading.textContent = "Today";
-        const avgTempToday = document.createElement("p");
-        avgTempToday.innerHTML = `<span>Average Temperature:</span> ${weather.weather[0].avgtempF}`;
-        const maxTempToday = document.createElement("p");
-        maxTempToday.textContent = `Max Temperature: ${weather.weather[0].maxtempF}`;
-        const minTempToday = document.createElement("p");
-        minTempToday.textContent = `Min Temperature: ${weather.weather[0].mintempF}`;
-        // append to today
-        // today.textContent = `${todayHeading} ${avgTempToday} ${maxTempToday} ${minTempToday}`;
+        // // main info
+        // const mainHeading = document.createElement("h2");
+        // mainHeading.textContent = location;
+        // const area = document.createElement("p");
+        // area.textContent = `Area: ${weather.nearest_area[0].areaName[0].value}`;
+        // const region = document.createElement("p");
+        // region.textContent = `Region: ${weather.nearest_area[0].region[0].value}`;
+        // const country = document.createElement("p");
+        // country.textContent = `Country: ${weather.nearest_area[0].country[0].value}`;
+        // const currently = document.createElement("p");
+        // currently.textContent = `Currently: Feels like ${weather.current_condition[0].FeelsLikeF}°F`;
 
-        // add to tomorrow
-        const tomorrowHeading = document.createElement("h3");
-        tomorrowHeading.textContent = "Tomorrow";
-        const avgTempTomorrow = document.createElement("p");
-        avgTempTomorrow.innerHTML = `<span>Average Temperature:</span> ${weather.weather[1].avgtempF}`;
-        const maxTempTomorrow = document.createElement("p");
-        maxTempTomorrow.textContent = `Max Temperature: ${weather.weather[1].maxtempF}`;
-        const minTempTomorrow = document.createElement("p");
-        minTempTomorrow.textContent = `Min Temperature: ${weather.weather[1].mintempF}`;
+        // // add to today
+        // const todayHeading = document.createElement("h3");
+        // todayHeading.textContent = "Today";
+        // const avgTempToday = document.createElement("p");
+        // avgTempToday.innerHTML = `<span>Average Temperature:</span> ${weather.weather[0].avgtempF}`;
+        // const maxTempToday = document.createElement("p");
+        // maxTempToday.textContent = `Max Temperature: ${weather.weather[0].maxtempF}`;
+        // const minTempToday = document.createElement("p");
+        // minTempToday.textContent = `Min Temperature: ${weather.weather[0].mintempF}`;
 
-        // add to day after
-        const dayAfterHeading = document.createElement("h3");
-        dayAfterHeading.textContent = "Day After Tomorrow";
-        const dayAfterAvg = document.createElement("p");
-        dayAfterAvg.innerHTML = `<span>Average Temperature:</span> ${weather.weather[2].avgtempF}°F`;
-        const dayAfterMax = document.createElement("p");
-        dayAfterMax.innerHTML = `<span>Highest Temperature:</span> ${weather.weather[2].maxtempF}°F`;
-        const dayAfterMin = document.createElement("p");
-        dayAfterMin.innerHTML = `<span>Lowest Temperature:</span> ${weather.weather[2].mintempF}°F`;
-        // append to dayAfter
-        // dayAfter.append(dayAfterHeading, dayAfterAvg, dayAfterMax, dayAfterMin);
+        // // add to tomorrow
+        // const tomorrowHeading = document.createElement("h3");
+        // tomorrowHeading.textContent = "Tomorrow";
+        // const avgTempTomorrow = document.createElement("p");
+        // avgTempTomorrow.innerHTML = `<span>Average Temperature:</span> ${weather.weather[1].avgtempF}`;
+        // const maxTempTomorrow = document.createElement("p");
+        // maxTempTomorrow.textContent = `Max Temperature: ${weather.weather[1].maxtempF}`;
+        // const minTempTomorrow = document.createElement("p");
+        // minTempTomorrow.textContent = `Min Temperature: ${weather.weather[1].mintempF}`;
+
+        // // add to day after
+        // const dayAfterHeading = document.createElement("h3");
+        // dayAfterHeading.textContent = "Day After Tomorrow";
+        // const dayAfterAvg = document.createElement("p");
+        // dayAfterAvg.innerHTML = `<span>Average Temperature:</span> ${weather.weather[2].avgtempF}°F`;
+        // const dayAfterMax = document.createElement("p");
+        // dayAfterMax.innerHTML = `<span>Highest Temperature:</span> ${weather.weather[2].maxtempF}°F`;
+        // const dayAfterMin = document.createElement("p");
+        // dayAfterMin.innerHTML = `<span>Lowest Temperature:</span> ${weather.weather[2].mintempF}°F`;
 
         // append items to aside for previous searches
         // const searchList = document.querySelector("ul");
@@ -127,6 +123,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
 // previous searches
 // use info from mainHeading to grab the location
 // use info from currently to grab the current temp
+
 // const mainHeading = document.createElement("h2");
 // mainHeading.textContent = location;
 // const area = document.createElement("p");
@@ -134,5 +131,8 @@ document.querySelector("form").addEventListener("submit", (event) => {
 // const currently = document.createElement("p");
 //         currently.textContent = `Currently: Feels like ${weather.current_condition[0].FeelsLikeF}°F`;
 
+const previousSearches = document.querySelector("ul");
+
 const previous = document.createElement("li");
 previous.textContent = location;
+previous.textContent = currently;
